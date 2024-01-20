@@ -5,9 +5,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CalcTest {
-//    Calc calc = new Calc();
-
-
     @Test
     public void ShouldHaveCorrectionSum() {
         int result = Calc.sum(3, 3);
