@@ -12,12 +12,19 @@ public class Calc {
     static int sum(int x, int y) {
         return x + y;
     }
+
     static int mult(int x, int y) {
         return x * y;
     }
+
     static int div(int x, int y) {
+
+        if (y == 0) {
+            throw new IllegalArgumentException("Cannot divide by zero");
+        }
         return x / y;
     }
+
     static int substract(int x, int y) {
         return x - y;
     }

@@ -2,7 +2,7 @@ package hw_1;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CalcTest {
 //    Calc calc = new Calc();
@@ -23,7 +23,11 @@ public class CalcTest {
     @Test
     public void ShouldHaveCorrectionDiv() {
         int result = Calc.div(3, 3);
-        assertEquals(1, result);
+        assertAll("деление/деление на ноль",
+                () -> assertEquals(1, result),
+                () -> assertThrows(IllegalArgumentException.class, () -> {
+                    Calc.div(3, 0);
+                }));
     }
 
     @Test
