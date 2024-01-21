@@ -6,19 +6,17 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CalcTest {
     @Test
-    public void ShouldHaveCorrectionSum() {
-        int result = Calc.sum(3, 3);
-        assertEquals(6, result);
+    public void shouldHaveCorrectionSum() {
+        assertEquals(6, Calc.sum(3, 3));
     }
 
     @Test
-    public void ShouldHaveCorrectionMult() {
-        int result = Calc.mult(3, 3);
-        assertEquals(9, result);
+    public void shouldHaveCorrectionMultiply() {
+        assertEquals(9, Calc.multiply(3, 3));
     }
 
     @Test
-    public void ShouldHaveCorrectionDiv() {
+    public void shouldHaveCorrectionDiv() {
         int result = Calc.div(3, 3);
         assertAll("деление/деление на ноль",
                 () -> assertEquals(1, result),
@@ -28,10 +26,7 @@ public class CalcTest {
     }
 
     @Test
-    public void ShouldHaveCorrectionSubstract() {
-        int result = Calc.substract(3, 3);
-        assertEquals(0, result);
+    public void shouldHaveCorrectionSubstract() {
+        assertEquals(0, Calc.substract(3, 3));
     }
-
-
 }
