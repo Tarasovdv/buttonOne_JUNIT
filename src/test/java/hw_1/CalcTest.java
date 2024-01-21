@@ -16,12 +16,12 @@ public class CalcTest {
     }
 
     @Test
-    public void shouldHaveCorrectionDiv() {
-        int result = Calc.div(3, 3);
+    public void shouldHaveCorrectionDivision() {
+        int result = Calc.division(3, 3);
         assertAll("деление/деление на ноль",
                 () -> assertEquals(1, result),
                 () -> assertThrows(IllegalArgumentException.class, () -> {
-                    Calc.div(3, 0);
+                    Calc.division(3, 0);
                 }));
     }
 
